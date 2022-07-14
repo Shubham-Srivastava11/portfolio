@@ -1,0 +1,15 @@
+.abstract {
+    height: 170px;
+    background-color: black;
+    margin-top: -1rem;
+    overflow: hidden;
+    box-shadow: 0 0 80px rgba(241, 151, 72, 0.867);
+
+}
+
+.abstract p {
+    color: white;
+    font-size: 2vw;
+    font-weight: 100;
+
+}
