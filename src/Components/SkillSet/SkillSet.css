@@ -23,7 +23,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 3rem;
-    opacity: .6;
+    /* opacity: .6; */
 }
 
 .skillImage p {
@@ -47,6 +47,11 @@
 .skillImage:hover>p {
     opacity: 1;
     transition: .3s;
+}
+
+.skillImage:hover>.skillHead {
+    color: orange;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 720px) {

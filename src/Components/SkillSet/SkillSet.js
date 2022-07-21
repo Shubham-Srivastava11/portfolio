@@ -10,22 +10,32 @@ const SkillSet = () => {
         },
         {
             img: images.jsImg,
-            skill: 'REACT',
+            skill: 'JAVASCRIPT',
             usage: 'Been using now'
         },
         {
             img: images.pythonImg,
-            skill: 'REACT',
+            skill: 'PYTHON',
             usage: 'Been using now'
         },
         {
             img: images.htmlImg,
-            skill: 'REACT',
+            skill: 'HTML5',
             usage: 'Been using now'
         },
         {
             img: images.cssImg,
-            skill: 'REACT',
+            skill: 'CSS',
+            usage: 'Been using now'
+        },
+        {
+            img: images.mysqlImg,
+            skill: 'MYSQL',
+            usage: 'Been using now'
+        },
+        {
+            img: images.javaImg,
+            skill: 'JAVA',
             usage: 'Been using now'
         }
     ]
@@ -39,7 +49,7 @@ const SkillSet = () => {
                         className='skillImage'
                         style={{ backgroundImage: `url(${data.img})` }}
                     >
-                        <p>{data.skill}</p>
+                        <p className='skillHead'>{data.skill}</p>
                         <p>{data.usage}</p>
                     </div></li>
                 )}

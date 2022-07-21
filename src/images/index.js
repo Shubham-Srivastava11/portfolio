@@ -4,7 +4,8 @@ import jsImg from './js.jpg';
 import pythonImg from './python.jpg';
 import htmlImg from './html.jpg';
 import cssImg from './css.jpg';
-
+import mysqlImg from './mysql.jpg';
+import javaImg from './java.jpg';
 
 const images = {
     profile,
@@ -12,7 +13,9 @@ const images = {
     jsImg,
     pythonImg,
     htmlImg,
-    cssImg
+    cssImg,
+    mysqlImg,
+    javaImg
 }
 
 export default images;
