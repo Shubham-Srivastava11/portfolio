@@ -19,10 +19,8 @@ const FirstLook = () => {
                 className='main-right'>
                 <div className='header'> {'<'}नमस्ते!{'>'} </div>
                 <div className='content'>
-                    <p>I'm
-                        <label> Shubham Srivastava </label>
-                        building up my skills to create more exciting stuff.
-                    </p>
+                    <p className='line1'>I'm<label> Shubham Srivastava </label>  building up my</p>
+                    <p className='line2'>  skills to create more exciting stuff.</p>
                 </div>
             </div>
 

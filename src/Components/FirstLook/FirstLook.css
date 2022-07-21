@@ -1,7 +1,7 @@
 .main {
     background-color: rgba(0, 0, 0, 0.926);
-    height: 300px;
-    padding: 5rem;
+    height: 25vw;
+    padding: 7vw;
     box-shadow: 0 0 100px rgba(72, 109, 241, 0.867);
     display: flex;
 }
@@ -11,9 +11,8 @@
 }
 
 .image {
-
-    height: 300px;
-    width: 300px;
+    height: 20vw;
+    width: 20vw;
     border-radius: 50%;
     background-size: cover;
 }
@@ -37,4 +36,87 @@
     /* float: left; */
     font-size: 3.5vw;
 
+}
+
+.line1,
+.line2 {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; */
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    /* position: relative; */
+    /* word-break: break-all; */
+    /* background-clip: padding-box, text; */
+    /* background-repeat: no-repeat; */
+
+}
+
+.line1 {
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+    animation:
+        typing_1 6s steps(30, end) 1s 1 normal both,
+        blink-caret_1 900ms steps(30, end) 8;
+}
+
+.line2 {
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+    animation:
+        typing_2 5s steps(30, end) 1s 1 normal both,
+        blink-caret_2 900ms steps(30, end) infinite;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+
+/* The typing effect */
+@keyframes typing_1 {
+
+    from {
+        width: 0
+    }
+
+    to {
+        width: 98%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret_1 {
+
+    from {
+        border-right-color: rgba(224, 99, 21, 0.9);
+    }
+
+    to {
+        border-right-color: rgba(0, 0, 0, 0.926);
+    }
+}
+
+/* The typing effect */
+@keyframes typing_2 {
+
+    from {
+        width: 0
+    }
+
+    to {
+        width: 76%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret_2 {
+
+    from {
+        border-right-color: rgba(224, 99, 21, 0.9);
+    }
+
+    to {
+        border-right-color: rgba(0, 0, 0, 0.926);
+    }
 }
