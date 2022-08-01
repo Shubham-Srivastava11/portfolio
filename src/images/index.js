@@ -6,6 +6,8 @@ import htmlImg from './html.jpg';
 import cssImg from './css.jpg';
 import mysqlImg from './mysql.jpg';
 import javaImg from './java.jpg';
+import jenkins from './jenkins.jpg'
+import admin from './admin_ui.png';
 
 const images = {
     profile,
@@ -15,7 +17,9 @@ const images = {
     htmlImg,
     cssImg,
     mysqlImg,
-    javaImg
+    javaImg,
+    jenkins,
+    admin
 }
 
 export default images;

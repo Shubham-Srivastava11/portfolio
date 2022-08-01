@@ -6,14 +6,16 @@
 
 .skillset {
     background-color: black;
-    padding: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     margin-top: -3rem;
+    margin-bottom: 1rem;
 }
 
 .skillset h1 {
     color: white;
     font-weight: 100;
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 
 .skillImage {
@@ -22,14 +24,15 @@
     border-radius: 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 3rem;
+    margin: 3vw;
+    transition: .5s;
     /* opacity: .6; */
 }
 
 .skillImage p {
     color: white;
+    font-size: 0;
     opacity: 0;
-    font-size: 2vw;
 }
 
 .skillImage:hover {
@@ -37,21 +40,27 @@
     box-shadow: 0 0 20px rgba(241, 154, 72, 0.867);
     background-size: 0;
     transition: .5s;
-    height: 18vw;
-    width: 18vw;
+    height: 22vw;
+    width: 22vw;
     opacity: 1;
     border-radius: 10%;
+
     /* margin: 2.65rem; */
 }
 
 .skillImage:hover>p {
     opacity: 1;
-    transition: .3s;
+    transition: .5s;
+}
+
+.skillHead {
+    font-size: 2vw;
 }
 
 .skillImage:hover>.skillHead {
     color: orange;
     font-weight: bold;
+    font-size: 2vw;
 }
 
 @media screen and (max-width: 720px) {
@@ -65,5 +74,100 @@
 
     .skillset ul {
         margin-left: -2rem;
+    }
+}
+
+.skillImage:hover>.skillFoot {
+    font-size: 1vw;
+    font-weight: 50;
+    color: gray;
+    padding: 1vw;
+}
+
+.skillImage:hover>.skillDesc {
+    font-size: 1.2vw;
+    padding: 5px;
+    font-weight: 50;
+}
+
+.hrLine {
+    border: .5px solid white;
+    background-color: white;
+    animation:
+        slide 1s steps(50, start) 1s,
+        slideBack 1s steps(50, end) 2s normal;
+}
+
+@keyframes slide {
+
+    from {
+        width: 0
+    }
+
+    to {
+        width: 98%
+    }
+}
+
+@keyframes slideBack {
+
+    from {
+        width: 98%
+    }
+
+    to {
+        width: 0
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .skillImage:hover {
+
+        box-shadow: 0 0 20px rgba(241, 154, 72, 0.867);
+        background-size: 0;
+        transition: .5s;
+        height: 30vw;
+        width: 30vw;
+        opacity: 1;
+        border-radius: 10%;
+
+        /* margin: 2.65rem; */
+    }
+
+    .skillImage:hover+.skillImage {
+        margin: 1rem;
+        height: 10vw;
+        width: 10vw;
+        transition: .5s;
+    }
+
+    .skillset {
+        margin-top: -5rem;
+    }
+
+    .skillImage {
+        margin-inline: 1.5rem;
+        height: 15vw;
+        width: 15vw;
+    }
+
+    .skillImage:hover>.skillFoot {
+        font-size: 2vw;
+        font-weight: 50;
+        color: gray;
+        padding: 1vw;
+    }
+
+    .skillImage:hover>.skillDesc {
+        font-size: 2vw;
+        padding: 5px;
+        font-weight: 50;
+    }
+
+    .skillImage:hover>.skillHead {
+        color: orange;
+        font-weight: bold;
+        font-size: 3vw;
     }
 }

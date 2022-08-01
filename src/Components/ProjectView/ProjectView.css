@@ -1,0 +1,66 @@
+.projectView {
+    /* background-color: rgb(147, 18, 18); */
+    background-color: black;
+    /* height: 450px; */
+    margin-top: -2.5rem;
+    /* padding-top: 2rem; */
+    padding-bottom: 2rem;
+
+}
+
+.container {
+    display: flex;
+}
+
+.projectHeader {
+    color: white;
+    font-weight: 200;
+    font-size: 2.5vw;
+    margin: 2rem;
+}
+
+.scroll {
+    overflow-x: scroll;
+    overflow-y: none;
+    padding-top: 2rem;
+    padding-inline: .9rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+}
+
+.projectView h1 {
+    color: white;
+    overflow: visible;
+    font-size: 3.5vw;
+
+}
+
+.left-scroll {
+    color: rgb(255, 255, 255);
+    margin-top: 6rem;
+    background-color: transparent;
+    height: 0px;
+}
+
+.right-scroll {
+    color: rgb(255, 255, 255);
+    margin-top: 6rem;
+    background-color: transparent;
+    height: 0px;
+}
+
+.left-scroll:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+.right-scroll:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera  */
+.scroll::-webkit-scrollbar {
+    display: none;
+}

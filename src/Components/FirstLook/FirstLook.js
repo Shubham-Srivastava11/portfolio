@@ -5,7 +5,9 @@ import images from '../../images';
 const FirstLook = () => {
     return (
         <div
-            className='main'>
+            className='main'
+            id='home' >
+
             <div
                 className='main-left'>
                 <div

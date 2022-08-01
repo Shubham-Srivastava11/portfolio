@@ -1,56 +1,24 @@
 import './SkillSet.css';
 import images from '../../images';
+import skillDetails from '../utils/SkillDetails';
 
 const SkillSet = () => {
-    const skillImages = [
-        {
-            img: images.reactImg,
-            skill: 'REACT',
-            usage: 'Been using now'
-        },
-        {
-            img: images.jsImg,
-            skill: 'JAVASCRIPT',
-            usage: 'Been using now'
-        },
-        {
-            img: images.pythonImg,
-            skill: 'PYTHON',
-            usage: 'Been using now'
-        },
-        {
-            img: images.htmlImg,
-            skill: 'HTML5',
-            usage: 'Been using now'
-        },
-        {
-            img: images.cssImg,
-            skill: 'CSS',
-            usage: 'Been using now'
-        },
-        {
-            img: images.mysqlImg,
-            skill: 'MYSQL',
-            usage: 'Been using now'
-        },
-        {
-            img: images.javaImg,
-            skill: 'JAVA',
-            usage: 'Been using now'
-        }
-    ]
-
     return (
-        <div className='skillset'>
+        <div className='skillset' id='skills'>
+            <div className='hrLine' ></div>
             <h1> Have put my hands on certain technologies....</h1>
             <ul>
-                {skillImages.map(data =>
+                {skillDetails.map(data =>
                     <li><div
                         className='skillImage'
-                        style={{ backgroundImage: `url(${data.img})` }}
+                        style={{
+                            backgroundImage: `url(${data.img})`
+                            // , margin: `${Math.random(2, 4)}vw` 
+                        }}
                     >
                         <p className='skillHead'>{data.skill}</p>
-                        <p>{data.usage}</p>
+                        <p className='skillDesc'>{data.desc}</p>
+                        <p className='skillFoot'>Last Used : {data.usage}</p>
                     </div></li>
                 )}
 

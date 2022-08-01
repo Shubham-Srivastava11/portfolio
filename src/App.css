@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 .App-logo {
@@ -11,4 +12,8 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

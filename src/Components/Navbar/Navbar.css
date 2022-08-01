@@ -1,0 +1,53 @@
+/* .menubar {
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    background-color: black;
+    color: white;
+    position: sticky;
+    padding: 1rem;
+    float: right;
+
+} */
+
+#navbar {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.926);
+    position: sticky;
+    border: 2px solid black;
+    /* width: 100%; */
+    /* display: none; */
+    top: 0;
+    /* margin-top: -.1rem; */
+    /* border-radius: 3px; */
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+#navbar a.active {
+    background-color: rgb(138, 36, 36);
+    color: white;
+}
+
+#navbar a:hover {
+    cursor: pointer;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
