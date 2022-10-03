@@ -1,7 +1,7 @@
 .main {
     background-color: rgba(0, 0, 0, 0.926);
     height: 25vw;
-    padding: 7vw;
+    padding: 10vw;
     /* box-shadow: 0 0 100px rgba(72, 109, 241, 0.867); */
     display: flex;
 }
@@ -107,7 +107,7 @@
     }
 
     to {
-        width: 76%
+        width: 82%
     }
 }
 

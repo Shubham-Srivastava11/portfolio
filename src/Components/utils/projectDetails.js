@@ -1,6 +1,15 @@
 
 const projectDetails = [
     {
+        name: 'Netflix-Clone',
+        skill: 'REACT, Firebase',
+        desc: 'This is an attempt to clone the Netflix home page with certain UI tweaks and a on Click trailer playing functionality using third party libraries (react-YouTube and movie-trailer).',
+        links: {
+            git: 'https://github.com/Shubham-Srivastava11/Netflix-clone',
+            projectUrl: 'https://netflix-clone-fbc93.web.app/'
+        }
+    },
+    {
         name: 'Admin-UI',
         skill: 'REACT',
         desc: 'An admin dashboard made with React.js with several functionalities using fundamental concepts.',
@@ -16,6 +25,15 @@ const projectDetails = [
         links: {
             git: 'https://github.com/Shubham-Srivastava11/teeRex-store',
             projectUrl: 'https://teerex-store.netlify.app/'
+        }
+    },
+    {
+        name: 'Onboarding step-form',
+        skill: 'REACT',
+        desc: 'This is a multiple step-form with state management using Redux. ',
+        links: {
+            git: 'https://github.com/Shubham-Srivastava11/stepForm',
+            projectUrl: 'https://onboarding-step-form.netlify.app/'
         }
     },
     {

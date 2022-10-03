@@ -95,6 +95,9 @@
 
 .small-footer a:hover {
     cursor: pointer;
+    transition: .2s;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .display {

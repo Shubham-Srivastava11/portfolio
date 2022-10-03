@@ -32,7 +32,7 @@ const Contact = () => {
                         required></input>
 
                     <input
-                        type='text'
+                        type='email'
                         className='inputFiels'
                         name='from_mail'
                         placeholder='Email..'
@@ -59,6 +59,7 @@ const Contact = () => {
                     <li><a id='git' href='https://github.com/Shubham-Srivastava11'><AiFillGithub className='icon' /></a></li>
                     <li><a id='linkedIn' href='https://www.linkedin.com/in/shubham-srivastava-667860171'><AiFillLinkedin className='icon' /></a></li>
                     <li><a id='twitter' href='https://twitter.com/_srivastava_'><AiOutlineTwitter className='icon' /></a></li>
+                    {/* <li><a id='resume' href='public/static/Resume-ShubhamSrivastava.docx' download><AiOutlineTwitter className='icon' /></a></li> */}
 
                 </ul>
                 <ul className='call-mail'>

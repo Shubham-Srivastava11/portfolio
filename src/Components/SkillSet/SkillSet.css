@@ -6,7 +6,7 @@
 
 .skillset {
     background-color: black;
-    padding-top: 5vw;
+    padding-top: 6vw;
     padding-bottom: 5vw;
     margin-top: -3rem;
     margin-bottom: 1rem;
@@ -16,6 +16,7 @@
     color: white;
     font-weight: 100;
     font-size: 3.5vw;
+    margin-top: 2rem;
 }
 
 .skillImage {
@@ -25,6 +26,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 3vw;
+    margin-top: 4vw;
     transition: .5s;
     /* opacity: .6; */
 }
@@ -150,6 +152,7 @@
         margin-inline: 1.5rem;
         height: 15vw;
         width: 15vw;
+        margin-top: 2rem;
     }
 
     .skillImage:hover>.skillFoot {
