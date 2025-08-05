@@ -15,10 +15,13 @@ const FirstLook = () => {
             <div className='hero-container'>
                 <div className='main-left'>
                     <div className='image-container'>
-                        <div
-                            className='image'
-                            style={{ backgroundImage: `url(${images.profile})` }}
-                        />
+                        <div className='image-glow'></div>
+                        <div className='image-wrapper'>
+                            <div
+                                className='image'
+                                style={{ backgroundImage: `url(${images.profile})` }}
+                            />
+                        </div>
                     </div>
                 </div>
                 
