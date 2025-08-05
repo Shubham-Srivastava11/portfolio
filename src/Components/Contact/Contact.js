@@ -1,78 +1,134 @@
 import './Contact.css';
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { BsTelephoneFill } from "react-icons/bs";
-import { send } from 'emailjs-com';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-
     function sendEmail(e) {
-        e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
-
+        e.preventDefault();
+        
         emailjs.sendForm('service_assktwe', 'template_hcgbeua', e.target, 'DTveqbKe64ej_Z5pl')
             .then((result) => {
-                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+                alert('Message sent successfully!');
+                e.target.reset();
             }, (error) => {
                 console.log(error.text);
+                alert('Failed to send message. Please try again.');
             });
     }
+
     return (
-        <div className='main-contact' id='connect'>
-            <div className='contact-card_column'>
-
-                <form onSubmit={sendEmail}>
-                    <h2 className='form-head' >Let's Connect.</h2>
-
-                    <input
-                        type='text'
-                        className='inputFiels'
-                        name='from_name'
-                        placeholder='Name..'
-                        required></input>
-
-                    <input
-                        type='email'
-                        className='inputFiels'
-                        name='from_mail'
-                        placeholder='Email..'
-                        required></input>
-
-                    <input
-                        type='text'
-                        className='inputFiels'
-                        name='contact'
-                        placeholder='Contact..'></input>
-
-                    <textarea
-                        className='textDesc'
-                        placeholder="Let's hear your idea..."
-                        name='message'
-                        rows='10'
-                        required></textarea>
-
-                    <button type='Submit' className='send'> Send </button>
-                </form>
-            </div >
-            <div className='social'>
-                <ul className='social-list'>
-                    <li><a id='git' href='https://github.com/Shubham-Srivastava11'><AiFillGithub className='icon' /></a></li>
-                    <li><a id='linkedIn' href='https://www.linkedin.com/in/shubham-srivastava-667860171'><AiFillLinkedin className='icon' /></a></li>
-                    <li><a id='twitter' href='https://twitter.com/_srivastava_'><AiOutlineTwitter className='icon' /></a></li>
-                    {/* <li><a id='resume' href='public/static/Resume-ShubhamSrivastava.docx' download><AiOutlineTwitter className='icon' /></a></li> */}
-
-                </ul>
-                <ul className='call-mail'>
-                    <li><FiMail className='icon-call' /> ssrivastava2297@gmail.com</li>
-                    <li><FiPhoneCall className='icon-call' /> +91 8791190399</li>
-                </ul>
-
+        <section className='contact-section' id='connect'>
+            <div className='contact-container'>
+                <div className='contact-header'>
+                    <div className='section-label'>Get In Touch</div>
+                    <h2 className='contact-title'>
+                        Let's Work Together
+                    </h2>
+                    <p className='contact-subtitle'>
+                        Have a project in mind or just want to chat? 
+                        I'd love to hear from you and discuss how we can bring your ideas to life.
+                    </p>
+                </div>
+                
+                <div className='contact-content'>
+                    <div className='contact-info'>
+                        <h3>Let's Connect</h3>
+                        
+                        <div className='contact-methods'>
+                            <div className='contact-method'>
+                                <FiMail className='contact-icon' />
+                                <span className='contact-text'>ssrivastava2297@gmail.com</span>
+                            </div>
+                            <div className='contact-method'>
+                                <FiPhoneCall className='contact-icon' />
+                                <span className='contact-text'>+91 8791190399</span>
+                            </div>
+                        </div>
+                        
+                        <div className='social-links'>
+                            <a 
+                                href='https://github.com/Shubham-Srivastava11' 
+                                className='social-link'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <AiFillGithub className='social-icon' />
+                            </a>
+                            <a 
+                                href='https://www.linkedin.com/in/shubham-srivastava-667860171' 
+                                className='social-link'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <AiFillLinkedin className='social-icon' />
+                            </a>
+                            <a 
+                                href='https://twitter.com/_srivastava_' 
+                                className='social-link'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <AiOutlineTwitter className='social-icon' />
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form className='contact-form' onSubmit={sendEmail}>
+                        <div className='form-group'>
+                            <label className='form-label'>Name</label>
+                            <input
+                                type='text'
+                                className='form-input'
+                                name='from_name'
+                                placeholder='Your name'
+                                required
+                            />
+                        </div>
+                        
+                        <div className='form-group'>
+                            <label className='form-label'>Email</label>
+                            <input
+                                type='email'
+                                className='form-input'
+                                name='from_mail'
+                                placeholder='your.email@example.com'
+                                required
+                            />
+                        </div>
+                        
+                        <div className='form-group'>
+                            <label className='form-label'>Phone (Optional)</label>
+                            <input
+                                type='text'
+                                className='form-input'
+                                name='contact'
+                                placeholder='Your phone number'
+                            />
+                        </div>
+                        
+                        <div className='form-group'>
+                            <label className='form-label'>Message</label>
+                            <textarea
+                                className='form-textarea'
+                                placeholder="Tell me about your project or just say hello..."
+                                name='message'
+                                required
+                            />
+                        </div>
+                        
+                        <button type='submit' className='submit-btn'>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div className='footer-credit'>
+                    Made with <span className='footer-heart'>❤</span> by Shubham Srivastava
+                </div>
             </div>
-            <h3 className='declaration'>Made with <h3>❤</h3> by Shubham.</h3>
-        </div>
-
-
-    )
-}
+        </section>
+    );
+};
 
 export default Contact;

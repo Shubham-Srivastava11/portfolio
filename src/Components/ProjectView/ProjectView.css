@@ -1,67 +1,170 @@
-.projectView {
-    /* background-color: rgb(147, 18, 18); */
-    background-color: black;
-    /* height: 450px; */
-    margin-top: -2.5rem;
-    /* padding-top: 2rem; */
-    padding-bottom: 2rem;
-
+.projects-section {
+    padding: 5rem 2rem;
+    background: #ffffff;
+    position: relative;
 }
 
-.container {
-    display: flex;
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.projectHeader {
+.projects-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-label {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.projects-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.projects-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+    padding: 2rem 2rem 1rem;
+    position: relative;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.project-tech {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
     color: white;
-    font-weight: 200;
-    font-size: 2.5vw;
-    margin: 2rem;
-    padding-top: 2rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
-.scroll {
-    overflow-x: scroll;
-    overflow-y: none;
-    padding-top: 2rem;
-    padding-inline: .9rem;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.project-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
     display: flex;
+    gap: 1rem;
+    padding: 0 2rem 2rem;
 }
 
-.projectView h1 {
+.project-link {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.project-link.primary {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
     color: white;
-    overflow: visible;
-    font-size: 3.5vw;
-
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
-.left-scroll {
-    color: rgb(255, 255, 255);
-    margin-top: 6rem;
-    background-color: transparent;
-    height: 0px;
+.project-link.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
 }
 
-.right-scroll {
-    color: rgb(255, 255, 255);
-    margin-top: 6rem;
-    background-color: transparent;
-    height: 0px;
+.project-link.secondary {
+    background: #f8f9fa;
+    color: #666;
+    border: 1px solid #e9ecef;
 }
 
-.left-scroll:hover {
-    color: brown;
-    cursor: pointer;
+.project-link.secondary:hover {
+    background: #e9ecef;
+    color: #495057;
 }
 
-.right-scroll:hover {
-    color: brown;
-    cursor: pointer;
+.project-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera  */
-.scroll::-webkit-scrollbar {
-    display: none;
+.project-status.demo {
+    background: #ffc107;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+}
+
+.project-status.code-only {
+    background: #6c757d;
+    box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.2);
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        margin: 0 1rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .project-link {
+        flex: none;
+    }
 }

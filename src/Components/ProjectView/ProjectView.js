@@ -1,48 +1,63 @@
-import Card from '../Card/Card';
 import './ProjectView.css';
 import projectDetails from '../utils/projectDetails';
-import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
-import { useState } from 'react';
-
 
 const ProjectView = () => {
-
-    // const [scrollCompleted, setScrollComplteted] = useState(0);
-    const scrollHandler = (event) => {
-
-        var target = event.currentTarget.id;
-        var container = document.getElementById('id-scroll');
-        var scrollCompleted = 0;
-        var slideVar = setInterval(function () {
-            if (target === 'left') {
-                container.scrollLeft -= 20;
-            } else {
-                container.scrollLeft += 20;
-            }
-            // setScrollComplteted(scrollCompleted + 5);
-            scrollCompleted += 20;
-            if (scrollCompleted >= 150) {
-                window.clearInterval(slideVar);
-            }
-        }, 40);
-    }
     return (
-        <div className='projectView' id='projects'>
-            <h1 className='projectHeader' >Let's explore some of the projects and works I've done.</h1>
-            <div className='container'  >
-                <div className='left-scroll' id='left' onClick={scrollHandler}><AiFillCaretLeft /></div>
-                <div className='scroll' id='id-scroll'>
-                    {projectDetails.map(data =>
-                        <div>
-                            <Card
-                                project={data} />
-                        </div>
-                    )}
+        <section className='projects-section' id='projects'>
+            <div className='projects-container'>
+                <div className='projects-header'>
+                    <div className='section-label'>My Work</div>
+                    <h2 className='projects-title'>
+                        Featured Projects
+                    </h2>
+                    <p className='projects-subtitle'>
+                        A collection of projects that showcase my skills and passion 
+                        for creating meaningful digital experiences.
+                    </p>
                 </div>
-                <div className='right-scroll' id='right' onClick={scrollHandler}><AiFillCaretRight /></div>
+                
+                <div className='projects-grid'>
+                    {projectDetails.map((project, index) => (
+                        <div key={index} className='project-card'>
+                            <div 
+                                className={`project-status ${
+                                    project.links.projectUrl ? 'demo' : 'code-only'
+                                }`}
+                                title={project.links.projectUrl ? 'Live Demo Available' : 'Code Only'}
+                            />
+                            
+                            <div className='project-header'>
+                                <h3 className='project-title'>{project.name}</h3>
+                                <div className='project-tech'>{project.skill}</div>
+                                <p className='project-description'>{project.desc}</p>
+                            </div>
+                            
+                            <div className='project-links'>
+                                <a 
+                                    href={project.links.git} 
+                                    className='project-link secondary'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    View Code
+                                </a>
+                                {project.links.projectUrl && (
+                                    <a 
+                                        href={project.links.projectUrl} 
+                                        className='project-link primary'
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                    >
+                                        Live Demo
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    )
-}
+        </section>
+    );
+};
 
 export default ProjectView;
